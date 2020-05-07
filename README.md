@@ -1,2 +1,2 @@
-This is a repositorz to test three.js
+This is a repository to test three.js
 
