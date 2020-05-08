@@ -69,37 +69,32 @@
          // calculate mouse position in normalized device coordinates
          // (-1 to +1) for both components
 
-        mouse.x = ( ( event.clientX - renderer.domElement.getBoundingClientRect().left ) / renderer.domElement.getBoundingClientRect().width ) * 2 - 1;
-		mouse.y = - ( ( event.clientY - renderer.domElement.getBoundingClientRect().top ) / renderer.domElement.getBoundingClientRect().height ) * 2 + 1;
+        mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+	    mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 
         console.log(mouse);
-         raycaster.setFromCamera(mouse, camera);
+        raycaster.setFromCamera(mouse, camera);
 
-         var intersects = raycaster.intersectObjects(scene.children, true)
-         for (let i = 0; i < intersects.length; i++) {
-             this.selectedItem = intersects[i].object;
-         }
-      
-         console.log(this.selectedItem)
-
+        var intersects = raycaster.intersectObjects(scene.children, true)
+        for (let i = 0; i < intersects.length; i++) {
+            this.selectedItem = intersects[i].object;
+        }
+        console.log(this.selectedItem)
      }
 
      function onMouseMove (event) {
       
-        mouse.x = ( ( event.clientX - renderer.domElement.getBoundingClientRect().left ) / renderer.domElement.getBoundingClientRect().width ) * 2 - 1;
-		mouse.y = - ( ( event.clientY - renderer.domElement.getBoundingClientRect().top ) / renderer.domElement.getBoundingClientRect().height ) * 2 + 1;
+        mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+	    mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 
-      
-         raycaster.setFromCamera(mouse, camera);
+        raycaster.setFromCamera(mouse, camera);
 
-         if (this.selectedItem != null) {
-             console.log('moving')
-             console.log(this.selectedItem);
-             this.selectedItem.position.copy(new THREE.Vector3(mouse.x, mouse.y,0));
-             console.log(selectedItem.position);
-         }
-
-      
+        if (this.selectedItem != null) {
+            console.log('moving')
+            console.log(this.selectedItem);
+            this.selectedItem.position.copy(new THREE.Vector3(mouse.x, mouse.y,0));
+            console.log(selectedItem.position);
+        }      
      }
 
      function onDocumentMouseCancel (event){
