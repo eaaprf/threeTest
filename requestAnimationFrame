@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro animation</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+    body {
+margin: 0;
+padding: 0;
+background-color: lightblue;
+}
+
+h1,h2,h3 {
+    padding: 0em 4vw;
+}
+
+#ball {
+    width: 20vw;
+    height: 20vw;
+    background-image: url(watch.svg);
+    background-size: 100%;
+}
+    </style>
+    
+</head>
+
+<body>
+     <h1>Micro animation</h1>
+    <div class="scene">
+    <div id="ball"></div>
+    </div>
+    
+    <script>
+        const ball = document.querySelector("#ball");
+
+let position = 0;
+
+//speed
+const speed = 100; //px per sec
+const framerate = 60; //frames per sec
+
+let last;
+
+function step() {
+    const now = performance.now();
+    //difference = delta on now and last now, and if last exist it uses last or it uses 0 if last does not exist
+    const delta = now - last || 0;
+
+    last = now;
+// The 1000 / delta gives the perfect speed at all conditions
+    position += speed / (1000 / delta);
+    if (position > 200) {
+        position = 0;
+
+    }
+    
+    ball.style.transform = `translateX(${position}px)`;
+    requestAnimationFrame(step);
+}
+
+step();
+    
+    </script>
+    
+</body>
+</html>
