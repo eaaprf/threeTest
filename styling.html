@@ -59,6 +59,7 @@ let last;
 
 function step() {
     console.log("step running");
+    // The now preformance
     const now = performance.now();
     //difference = delta on now and last now, and if last exist it uses last or it uses 0 if last does not exist
     const delta = now - last || 0;
