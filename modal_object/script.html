@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>script</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <!--
+    clone.document.querySelector(".data_name").textContent = data.name;
+    
+    clone.document.querySelector(".data_price").textContent = data.price;
+    clone.document.querySelector(".data_image").src = "/" + data.image;
+    clone.document.querySelector(".data_image").alt = data.name;
+
+
+    clone.document.querySelector("div.box").dataset.id = data.id;
+    clone.document.querySelector("div.box").dataset.type = data.type;
+
+
+    clone.document.querySelector("div.box").addEventListener("click", selectbox);
+-->
+    <h1>Script</h1>
+  
+    <div id="box.content"></div>
+
+    <template id="box_template">
+        <div class="container">
+    
+            <img src="banana.png" class="img-responsive data_image">
+            <h5 class="data_name">DATA_NAVN</h5>
+            <h4 class="pris">Pris: <span class="data_price">DATA_PRIS</span>,- kr</h4>
+
+            </div>
+        </template>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>

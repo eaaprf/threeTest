@@ -1,0 +1,41 @@
+[
+{"id": "fl01",
+
+"type": "box",
+"name": "OD20",  
+"image": "OD20.png",  
+"price": 2    
+},
+    {
+"id": "fl02",
+
+"type": "box",
+"name": "OD20",  
+"image": "OD20.png",  
+"price": 2 
+    },
+    {
+"id": "fl03",
+
+"type": "box",
+"name": "OD20",  
+"image": "OD20.png",  
+"price": 2 
+    },
+    {
+"id": "fl04",
+
+"type": "box",
+"name": "OD20",  
+"image": "OD20.png",  
+"price": 2 
+    },
+    {
+"id": "fl05",
+
+"type": "box",
+"name": "OD20",  
+"image": "OD20.png",  
+"price": 2 
+    }
+]
