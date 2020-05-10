@@ -1,0 +1,56 @@
+h1 {
+    position: absolute;
+    top: 50vh;
+    left: 43vw;
+    font-weight: bolder;
+    color: yellow;
+    z-index: 1;
+}
+
+#app {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(background.jpg);
+    background-size: contain;
+    overflow: hidden;
+}
+
+#app div {
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    width: 280px;
+    height: 280px;
+    background: url('watch.svg');
+    background-size: contain;
+    transition: all 4s;
+    transform: translate(0,0);
+    z-index: 0;
+/*    animation: watch 5s ease ;*/
+/*    animation-iteration-count: 1;*/
+}
+
+/*
+@keyframes watch {
+    0% {
+      transform: rotate(0deg);
+  } 
+    100% {
+      transform: rotate(360deg);
+  }
+}*/
+div {
+    width: 280px;
+    height: 280px;
+    background: url('https://ununsplash.imgix.net/photo-1427434846691-47fc561d1179?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050') center no-repeat;
+  background-size: cover;
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  animation: clips 3s ease infinite;
+}
+
+@keyframes clips {
+  50% {
+clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%)
+  }
+}
